@@ -7,7 +7,7 @@ class TwoSum {
     //You may assume that each input would have exactly one solution, and you may not use the same element twice.
     //You can return the answer in any order.
 
-    public static int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>(nums.length);
         for(int i = 0; i < nums.length; i++) {
             int comp = target - nums[i];
@@ -21,7 +21,8 @@ class TwoSum {
     public static void main(String[] args){
         int []nums = {2,7,11,15};
         int target = 9;
-        int[] output = twoSum(nums, target);
+        TwoSum obj = new TwoSum();
+        int[] output = obj.twoSum(nums, target);
         System.out.print("[");
         for(int i = 0; i < output.length; i++){
             System.out.print(output[i] + ", ");
